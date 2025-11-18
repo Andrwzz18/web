@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes - Guía de Restaurantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 min-h-screen">
+    
+    <!-- Header -->
+    <div id="province-header" class="bg-gradient-to-r from-orange-500 to-amber-600 text-white py-12 px-4 shadow-xl">
+        <div class="container mx-auto max-w-6xl">
+            <button onclick="window.location.href='index.html'" class="mb-6 text-white hover:bg-white/20 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Volver
+            </button>
+            <div class="flex items-center gap-4 mb-4">
+                <div class="bg-white/20 backdrop-blur-sm p-3 rounded-full">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 id="province-name" class="text-4xl md:text-5xl font-bold"></h1>
+                    <p id="province-description" class="text-orange-100 text-lg mt-2"></p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 text-orange-100">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                <span id="restaurant-count"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Restaurants Grid -->
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <div id="restaurants-grid" class="grid md:grid-cols-2 gap-8">
+            <!-- Los restaurantes se cargarán aquí -->
+        </div>
+    </div>
+
+    <!-- Carrito Flotante -->
+    <button id="cart-button" class="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-2xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 z-50 items-center justify-center hidden">
+        <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        <span id="cart-count" class="absolute -top-2 -right-2 h-7 w-7 rounded-full bg-red-500 text-white border-2 border-white flex items-center justify-center text-sm font-bold">0</span>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/province.js"></script>
+</body>
+</html>
